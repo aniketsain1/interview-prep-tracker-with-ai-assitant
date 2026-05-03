@@ -1,73 +1,165 @@
-# React + TypeScript + Vite
+# 🚀 Interview Prep Tracker with AI Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered interview preparation dashboard that helps you track your learning progress, visualize your preparation, and get instant AI-generated explanations, interview questions, and revision plans.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🔥 Features
 
-## React Compiler
+* 📊 Track interview topics with status:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+  * Not Started
+  * In Progress
+  * Done
+* 📈 Visual analytics (Pie & Bar charts)
+* ✏️ Add, edit, and delete topics
+* 🤖 AI Assistant Panel:
 
-## Expanding the ESLint configuration
+  * Ask anything
+  * Get topic explanations
+  * Generate interview questions
+  * Smart suggestions
+* ⚡ Fast and responsive UI
+* 💾 Local storage persistence
+* 🎯 Clean and structured UI for productivity
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧠 Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Frontend
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* React.js
+* TypeScript
+* Tailwind CSS
+* Recharts
+* Vite
+
+### Backend
+
+* Node.js
+* Express.js
+* OpenRouter (OpenAI-compatible API)
+
+---
+
+## 📁 Project Structure
+
+```
+interview-prep-tracker/
+└── interview-prep-tracker/
+    ├── src/                # Frontend source code
+    ├── public/             # Static assets
+    ├── server/             # Backend (API)
+    │   ├── index.js
+    │   ├── .env
+    │   └── package.json
+    ├── .env                # Frontend environment variables
+    ├── package.json
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+> Note: Frontend and backend are kept in the same project folder for simplicity.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/AniketSain1/interview-prep-tracker-with-AI-assitant.git
+cd interview-prep-tracker-with-AI-assitant/interview-prep-tracker
 ```
+
+---
+
+## 🔧 Backend Setup
+
+```bash
+cd server
+npm install
+```
+
+Create `.env` inside `server/`:
+
+```
+OPENROUTER_API_KEY=your_api_key_here
+```
+
+Run backend:
+
+```bash
+node index.js
+```
+
+---
+
+## 💻 Frontend Setup
+
+```bash
+cd ..
+npm install
+npm run dev
+```
+
+Create `.env` in root frontend folder:
+
+```
+VITE_API_URL=http://localhost:5001
+```
+
+---
+
+## 🌍 Deployment
+
+### Frontend
+
+* Vercel
+
+### Backend
+
+* Render
+
+---
+
+## 🤖 AI Assistant Capabilities
+
+* Provides structured explanations
+* Generates interview questions
+* Helps with quick revision
+* Context-based suggestions from selected topics
+
+---
+
+## 🧪 Example Workflow
+
+1. Add a topic (e.g., React Hooks)
+2. Update progress
+3. Click “Ask AI”
+4. Get:
+
+   * Explanation
+   * Key points
+   * Interview questions
+
+---
+
+## 🚀 Future Improvements
+
+* 🔥 Streaming AI responses (typing effect)
+* 💬 Chat history saving
+* 🌙 Dark mode
+* 🧠 Smart topic recommendations
+* 🔐 Authentication system
+
+---
+
+## 👨‍💻 Author
+
+**Aniket Saini**
+
+---
+
+## ⭐ Support
+
+If you found this helpful, give it a ⭐ on GitHub!
